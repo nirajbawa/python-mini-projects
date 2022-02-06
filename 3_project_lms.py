@@ -10,7 +10,7 @@ class library:
 
     def borrowbook(self, bookname):
         if bookname  in  self.books:
-            print("you have been issued. " + bookname+ " please keep it safe and return it withinn 30 days")
+            print("you have been issued. book " + bookname + " please keep it safe and return it withinn 30 days")
             self.books.remove(bookname)
         else:
             print("sorry, this book has already bee issued to  someone else. please wait until the book  is available")   
@@ -22,11 +22,11 @@ class library:
 
 class student :
     def requestbook(self):
-        self.book = raw_input("enter the name  of book you want to borrow : ")
+        self.book = str(input("enter the name of book you want to borrow : "))
         return self.book
 
     def returnbook(self):
-        self.book = raw_input("enter the name  of book you want to return : ")
+        self.book = str(input("enter the name of book you want to return : "))
         return self.book
 
 if __name__ == "__main__":
